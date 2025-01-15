@@ -1,5 +1,5 @@
-module tableimage
+module github.com/Techbinator/go-table-image
 
-go 1.12
+go 1.17
 
-require golang.org/x/image v0.0.0-20190802002840-cff245a6509b
+require golang.org/x/image v0.23.0

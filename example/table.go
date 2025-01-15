@@ -1,7 +1,7 @@
 package main
 
 import (
-	"tableimage"
+	tableimage "github.com/Techbinator/go-table-image"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 				},
 				tableimage.TD{
 					Color: "#000",
-					Text:  "Name",
+					Text:  "name",
 				},
 				tableimage.TD{
 					Color: "#008000",
