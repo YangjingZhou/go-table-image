@@ -51,6 +51,7 @@ func wrapText(input string) []string {
 
 		if len(lineText)+len(word)+1 >= wrapWordsLen {
 			wrapped = append(wrapped, lineText)
+			// if it is the last word, it will be lost, so we add an if after the loop
 			lineText = word
 		} else {
 			if lineText == "" {
@@ -61,12 +62,15 @@ func wrapText(input string) []string {
 			//if it is the last word
 			if i == wordsLength-1 {
 				wrapped = append(wrapped, lineText)
+				lineText = ""
 			}
 
 		}
 
 	}
-
+	if lineText != "" {
+		wrapped = append(wrapped, lineText)
+	}
 	return wrapped
 
 }
